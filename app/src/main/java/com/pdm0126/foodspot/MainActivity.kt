@@ -7,10 +7,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation3.runtime.entryProvider
+import androidx.navigation3.runtime.rememberNavBackStack
+import androidx.navigation3.ui.NavDisplay
+import com.pdm0126.foodspot.screens.RestaurantDetail.RestaurantDetailScreen
 import com.pdm0126.foodspot.screens.RestaurantList.RestaurantListScreen
 import com.pdm0126.foodspot.ui.theme.FoodSpotTheme
 
@@ -32,13 +34,23 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun FoodSpot(modifier: Modifier = Modifier) {
-  RestaurantListScreen({})
-}
+  val backStack = rememberNavBackStack(Routes.RestaurantList)
 
-@Preview(showBackground = true)
-@Composable
-fun FoodSpotPreview() {
-  FoodSpotTheme {
-    FoodSpot()
-  }
+  NavDisplay(
+    backStack = backStack,
+    onBack = { backStack.removeLastOrNull() },
+    entryProvider = entryProvider {
+      entry<Routes.RestaurantList> {
+        RestaurantListScreen(
+          { id -> backStack.add(Routes.RestaurantDetail(id)) }
+        )
+      }
+      entry<Routes.RestaurantDetail> { key ->
+        RestaurantDetailScreen(
+          key.id,
+          { backStack.removeLastOrNull() }
+        )
+      }
+    }
+  )
 }

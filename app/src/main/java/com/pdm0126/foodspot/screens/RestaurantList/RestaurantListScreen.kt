@@ -33,6 +33,7 @@ fun RestaurantListScreen(
   if (loading) {
     AppScaffold(title = "Restaurantes") { padding ->
       Column(
+        modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
       ) {
@@ -74,6 +75,5 @@ fun RestaurantListScreen(
         Spacer(Modifier.height(8.dp))
       }
     }
-
   }
 }
