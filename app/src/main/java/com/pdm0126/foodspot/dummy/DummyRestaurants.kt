@@ -13,24 +13,36 @@ val restaurants = listOf(
     menu = listOf(
       Dish(
         id = 1,
+        name = "Coctel de pescado",
+        description = "Coctel con pescado y vegetales en salsa de tomate o salsa rosada",
+        imageUrl = "https://cdn7.kiwilimon.com/recetaimagen/29699/640x640/31117.jpg.jpg"
+      ),
+      Dish(
+        id = 2,
         name = "Coctel de camarón",
         description = "Coctel con camarones y vegetales en salsa de tomate o salsa rosada",
         imageUrl = "https://cdn7.kiwilimon.com/recetaimagen/29699/640x640/31117.jpg.jpg"
       ),
       Dish(
-        id = 2,
-        name = "Taco de pescado",
-        description = "Taco con pescado frito, ensalada de repollo y aguacate",
+        id = 3,
+        name = "Tacos de pescado",
+        description = "Tacos con pescado frito, ensalada de repollo y aguacate",
         imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTOKfonx9TblJUeIx6u_zxZJmcqdGmjwoYdw&s"
       ),
       Dish(
-        id = 3,
+        id = 4,
+        name = "Tacos de camarón",
+        description = "Tacos con camarón frito, ensalada de repollo y aguacate",
+        imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTOKfonx9TblJUeIx6u_zxZJmcqdGmjwoYdw&s"
+      ),
+      Dish(
+        id = 5,
         name = "Pescado a la plancha",
         description = "Plato de pescado acompañado con arroz, ensalada, salsa y tortilla frita",
         imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP6ERCaEe36eXgrrgul0zfNpStovxHbMyA0g&s"
       ),
       Dish(
-        id = 4,
+        id = 6,
         name = "Michelada",
         description = "Bebida preparada de cerveza con limón, chile y sal",
         imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-N9WA3V5l2qW4SSujiQVMn8ql4zQxSHRduw&s"
@@ -61,6 +73,12 @@ val restaurants = listOf(
         name = "Chow mein",
         description = "Fideos salteados con vegetales y la proteina de elección",
         imageUrl = "https://www.cocinadelirante.com/800x600/filters:format(webp):quality(75)/sites/default/files/images/2023/08/comidachinachowmeindepollo.jpg"
+      ),
+      Dish(
+        id = 4,
+        name = "Rollos primavera",
+        description = "Orden de rollos fritos rellenos de vegetales, acompañados con salsa",
+        imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcn5V2uQ8kpO60dUL8xwG8G8iyfNhl_Lqi_g&s"
       )
     )
   ),
@@ -79,12 +97,24 @@ val restaurants = listOf(
       ),
       Dish(
         id = 2,
+        name = "Cono doble",
+        description = "Cono con dos bolas de helado del sabor de elección",
+        imageUrl = "https://www.laneveria.com.sv/wp-content/uploads/2024/09/conosyogurt-mango.jpg"
+      ),
+      Dish(
+        id = 3,
+        name = "Banana Split",
+        description = "Banana y tres bolas de helado, con crema batida y toppings",
+        imageUrl = "https://www.laneveria.com.sv/wp-content/uploads/2016/08/WEB-SERVIDOS-2019-BANANA-SPLIT2020.png"
+      ),
+      Dish(
+        id = 4,
         name = "Pastel helado",
         description = "Pastel grande con capas de pan y helado, cubierto de crema",
         imageUrl = "https://www.laneveria.com.sv/wp-content/uploads/2021/07/2-porcion-helado.jpg"
       ),
       Dish(
-        id = 3,
+        id = 5,
         name = "Milkshake",
         description = "Bebida a base de leche con helado del sabor de elección",
         imageUrl = "https://bromabakery.com/wp-content/uploads/2016/03/Caramel-Milkshake-3.jpg"
@@ -121,6 +151,12 @@ val restaurants = listOf(
         name = "Mozzarella Sticks",
         description = "Orden de tiras de queso mozzarella empanizadas",
         imageUrl = "https://sugarspunrun.com/wp-content/uploads/2021/07/Homemade-Mozzarella-Sticks-Recipe-1-of-1.jpg"
+      ),
+      Dish(
+        id = 5,
+        name = "Té helado",
+        description = "Vaso de té helado de limón, durazno o frambueza",
+        imageUrl = "https://www.divinacocina.es/wp-content/uploads/2015/06/te-helado-1.jpg"
       )
     )
   ),
@@ -135,7 +171,7 @@ val restaurants = listOf(
         id = 1,
         name = "Cappuccino",
         description = "Shot de espresso con leche caliente y capa de espuma",
-        imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Cappuccino_at_Sightglass_Coffee.jpg/1280px-Cappuccino_at_Sightglass_Coffee.jpg"
+        imageUrl = "https://smallcakesbakery.com/wp-content/uploads/2024/01/capuccino.png"
       ),
       Dish(
         id = 2,
@@ -145,10 +181,22 @@ val restaurants = listOf(
       ),
       Dish(
         id = 3,
+        name = "Caramel Frappe",
+        description = "Bebida fría de café con caramelo y crema batida",
+        imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHD6s7mn_Jp0bYPr5bLH1RB2rZZ_Dgp4FVIA&s"
+      ),
+      Dish(
+        id = 4,
         name = "Carrot cake",
         description = "Porción de pastel de zanahoria con glaseado de queso crema",
         imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjxUxoTuNdm14xVtobIndIFQm4u7TYdJEdmg&s"
-      )
+      ),
+      Dish(
+        id = 5,
+        name = "Club Sandwich",
+        description = "Sandwich con jamón de pavo, queso mozzarella y vegetales",
+        imageUrl = "https://somethingaboutsandwiches.com/wp-content/uploads/2022/04/ham-sandwich.jpg"
+      ),
     )
   ),
   Restaurant(
@@ -166,18 +214,24 @@ val restaurants = listOf(
       ),
       Dish(
         id = 2,
+        name = "Pupusa revuelta",
+        description = "Pupusa de masa de maíz rellena con queso, frijoles fritos y chicharrón",
+        imageUrl = "https://www.danceswithknives.com/wp-content/uploads/2021/01/cheesy-pupusa-upclose-square.jpg"
+      ),
+      Dish(
+        id = 3,
         name = "Enchilada",
         description = "Tostada con frijoles fritos, carne, curtido y huevo hervido",
         imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJVcnnjIMShuBPxM8AWPO7XRNsm5yWNaZz9A&s"
       ),
       Dish(
-        id = 3,
+        id = 4,
         name = "Empanada de leche",
         description = "Bolita de masa de plátano rellena con leche poleada",
         imageUrl = "https://lh3.googleusercontent.com/-gsC6B49cA3I/U1g5kkLMxWI/AAAAAAAAEYE/NL8Z2M7Kb_k/s596/empanadas-de-platano.jpg"
       ),
       Dish(
-        id = 4,
+        id = 5,
         name = "Horchata",
         description = "Refrescante vaso de horchata de morro, servida con hielo",
         imageUrl = "https://assets.epicurious.com/photos/57437b888ee131d77c1d689d/1:1/w_2560%2Cc_limit/Horchata.jpg"
@@ -199,18 +253,30 @@ val restaurants = listOf(
       ),
       Dish(
         id = 2,
+        name = "Tacos de lengua",
+        description = "Orden de tres tacos con lengua de res, cebolla y cilantro",
+        imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkY2LjgzMN3zrzakLYoD7xBAlIvdjv3WMTWg&s"
+      ),
+      Dish(
+        id = 3,
         name = "Torta de pollo",
         description = "Torta con pollo, frijoles fritos, queso fundido y aguacate fresco",
         imageUrl = "https://bakeitwithlove.com/wp-content/uploads/2022/10/Mexican-Torta-carne-asada-sandwich-sq.jpg"
       ),
       Dish(
-        id = 3,
+        id = 4,
+        name = "Burrito al pastor",
+        description = "Burrito con carne al pastor, frijoles, arroz, queso, cebolla y aguacate fresco",
+        imageUrl = "https://static01.nyt.com/images/2024/01/10/multimedia/AS-Burrito-vzhk/AS-Burrito-vzhk-mediumSquareAt3X.jpg"
+      ),
+      Dish(
+        id = 5,
         name = "Burrito de chorizo",
         description = "Burrito con chorizo, frijoles, arroz, queso, cebolla y aguacate fresco",
         imageUrl = "https://static01.nyt.com/images/2024/01/10/multimedia/AS-Burrito-vzhk/AS-Burrito-vzhk-mediumSquareAt3X.jpg"
       ),
       Dish(
-        id = 4,
+        id = 6,
         name = "Sopa de tortilla",
         description = "Plato de sopa con tortilla, queso, aguacate y cilantro",
         imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRYqg1sD-KIMIteAv6Zl_IhbyxIna75Q72Qg&s"
@@ -268,6 +334,12 @@ val restaurants = listOf(
         name = "Croissant",
         description = "Pan de masa de hojaldre relleno con crema pastelera",
         imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-6JKmtZP6uXL4KULmiBXBPtVjhphR27UqcQ&s"
+      ),
+      Dish(
+        id = 4,
+        name = "Carrot cake",
+        description = "Porción de pastel de zanahoria con glaseado de queso crema",
+        imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjxUxoTuNdm14xVtobIndIFQm4u7TYdJEdmg&s"
       )
     )
   ),
@@ -301,6 +373,90 @@ val restaurants = listOf(
         name = "Pasta marinara",
         description = "Plato de espagueti con salsa de tomate, albondigas y queso parmesano",
         imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1Syf_gc6-y0tp6spVdHiZrNlHbpjO2TziJw&s"
+      )
+    )
+  ),
+  Restaurant(
+    id = 11,
+    name = "Sivar Sport Bar",
+    description = "El mejor lugar para el entretenimiento y buena comida",
+    imageUrl = "https://img.magnific.com/vector-gratis/diseno-logotipo-bar-deportivo-diseno-plano_23-2149459060.jpg",
+    categories = listOf("Hamburguesas", "Pizza", "Mariscos", "Bebidas"),
+    menu = listOf(
+      Dish(
+        id = 1,
+        name = "Classic Cheeseburger",
+        description = "Hamburguesa clásica con dos rodajas de queso americano",
+        imageUrl = "https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg"
+      ),
+      Dish(
+        id = 2,
+        name = "Pizza de pepperoni",
+        description = "Pizza con salsa de tomate, queso mozzarella y pepperoni",
+        imageUrl = "https://www.pizzahut.com.sv/static/media/images/images/jpg/1_18-06-2025-15-35_MD.jpg"
+      ),
+      Dish(
+        id = 3,
+        name = "Tacos de pescado",
+        description = "Tacos con pescado frito, ensalada de repollo y aguacate",
+        imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTOKfonx9TblJUeIx6u_zxZJmcqdGmjwoYdw&s"
+      ),
+      Dish(
+        id = 4,
+        name = "Michelada",
+        description = "Bebida preparada de cerveza con limón, chile y sal",
+        imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-N9WA3V5l2qW4SSujiQVMn8ql4zQxSHRduw&s"
+      ),
+      Dish(
+        id = 5,
+        name = "Té helado",
+        description = "Vaso de té helado de limón, durazno o frambueza",
+        imageUrl = "https://www.divinacocina.es/wp-content/uploads/2015/06/te-helado-1.jpg"
+      )
+    )
+  ),
+  Restaurant(
+    id = 12,
+    name = "Plaza Azteca",
+    description = "La mejor comida mexicana de la ciudad",
+    imageUrl = "https://i.pinimg.com/474x/7c/fa/25/7cfa2523cc5fac176f1ba630fb5a62fc.jpg",
+    categories = listOf("Mexicana", "Bebidas"),
+    menu = listOf(
+      Dish(
+        id = 1,
+        name = "Tacos al pastor",
+        description = "Orden de tres tacos con carne al pastor, cebolla y cilantro",
+        imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkY2LjgzMN3zrzakLYoD7xBAlIvdjv3WMTWg&s"
+      ),
+      Dish(
+        id = 2,
+        name = "Tacos de lengua",
+        description = "Orden de tres tacos con lengua de res, cebolla y cilantro",
+        imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkY2LjgzMN3zrzakLYoD7xBAlIvdjv3WMTWg&s"
+      ),
+      Dish(
+        id = 3,
+        name = "Torta de pollo",
+        description = "Torta con pollo, frijoles fritos, queso fundido y aguacate fresco",
+        imageUrl = "https://bakeitwithlove.com/wp-content/uploads/2022/10/Mexican-Torta-carne-asada-sandwich-sq.jpg"
+      ),
+      Dish(
+        id = 4,
+        name = "Burrito al pastor",
+        description = "Burrito con carne al pastor, frijoles, arroz, queso, cebolla y aguacate fresco",
+        imageUrl = "https://static01.nyt.com/images/2024/01/10/multimedia/AS-Burrito-vzhk/AS-Burrito-vzhk-mediumSquareAt3X.jpg"
+      ),
+      Dish(
+        id = 5,
+        name = "Burrito de chorizo",
+        description = "Burrito con chorizo, frijoles, arroz, queso, cebolla y aguacate fresco",
+        imageUrl = "https://static01.nyt.com/images/2024/01/10/multimedia/AS-Burrito-vzhk/AS-Burrito-vzhk-mediumSquareAt3X.jpg"
+      ),
+      Dish(
+        id = 6,
+        name = "Sopa de tortilla",
+        description = "Plato de sopa con tortilla, queso, aguacate y cilantro",
+        imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRYqg1sD-KIMIteAv6Zl_IhbyxIna75Q72Qg&s"
       )
     )
   )
