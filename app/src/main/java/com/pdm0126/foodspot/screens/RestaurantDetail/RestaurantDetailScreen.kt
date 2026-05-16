@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
@@ -51,13 +52,16 @@ fun RestaurantDetailScreen(
   }
 
   if (loading) {
-    AppScaffold(title = restaurant?.name ?: "") { padding ->
+    AppScaffold(title = "Cargando") { padding ->
       Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
       ) {
-        CircularProgressIndicator(modifier = Modifier.padding(padding))
+        CircularProgressIndicator(modifier = Modifier
+          .padding(padding)
+          .size(150.dp)
+        )
       }
     }
     return

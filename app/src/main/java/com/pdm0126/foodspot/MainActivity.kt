@@ -14,6 +14,7 @@ import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 import com.pdm0126.foodspot.screens.RestaurantDetail.RestaurantDetailScreen
 import com.pdm0126.foodspot.screens.RestaurantList.RestaurantListScreen
+import com.pdm0126.foodspot.screens.RestaurantSearch.RestaurantSearchScreen
 import com.pdm0126.foodspot.ui.theme.FoodSpotTheme
 
 class MainActivity : ComponentActivity() {
@@ -42,13 +43,20 @@ fun FoodSpot(modifier: Modifier = Modifier) {
     entryProvider = entryProvider {
       entry<Routes.RestaurantList> {
         RestaurantListScreen(
-          { id -> backStack.add(Routes.RestaurantDetail(id)) }
+          { id -> backStack.add(Routes.RestaurantDetail(id)) },
+          { backStack.add(Routes.RestaurantSearch) }
         )
       }
       entry<Routes.RestaurantDetail> { key ->
         RestaurantDetailScreen(
           key.id,
           { backStack.removeLastOrNull() }
+        )
+      }
+      entry<Routes.RestaurantSearch> {
+        RestaurantSearchScreen(
+          { backStack.removeLastOrNull() },
+          { id -> backStack.add(Routes.RestaurantDetail(id)) }
         )
       }
     }

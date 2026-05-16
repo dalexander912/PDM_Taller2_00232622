@@ -6,11 +6,16 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -25,19 +30,23 @@ import com.pdm0126.foodspot.components.RestaurantItem
 @Composable
 fun RestaurantListScreen(
   navigateToDetail: (Int) -> Unit,
+  navigateToSearch: () -> Unit,
   viewModel: RestaurantListViewModel = viewModel()
 ) {
   val restaurants by viewModel.restaurants.collectAsState()
   val loading by viewModel.loading.collectAsState()
 
   if (loading) {
-    AppScaffold(title = "Restaurantes") { padding ->
+    AppScaffold(title = "Cargando") { padding ->
       Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
       ) {
-        CircularProgressIndicator(modifier = Modifier.padding(padding))
+        CircularProgressIndicator(modifier = Modifier
+          .padding(padding)
+          .size(150.dp)
+        )
       }
     }
     return
@@ -45,7 +54,17 @@ fun RestaurantListScreen(
 
   val categories = restaurants.flatMap { it.categories }.distinct()
 
-  AppScaffold(title = "Restaurantes") { padding ->
+  AppScaffold(
+    title = "Restaurantes",
+    navigationIcon = {
+      IconButton(navigateToSearch) {
+        Icon(
+          imageVector = Icons.Filled.Search,
+          contentDescription = "Buscar"
+        )
+      }
+    }
+  ) { padding ->
     LazyColumn(
       modifier = Modifier
         .fillMaxSize()
